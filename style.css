@@ -1,0 +1,130 @@
+:root {
+  --bg: #050816;
+  --panel: rgba(255,255,255,0.05);
+  --neon: #00eaff;
+  --text: #e8e8e8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a1a3a, #02030a);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+}
+
+.logo span { color: var(--neon); }
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+  padding: 80px 50px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content span { color: var(--neon); }
+
+.section {
+  padding: 90px 50px;
+  text-align: center;
+}
+
+.dark { background: #070b1f; }
+
+.system-card {
+  max-width: 600px;
+  margin: auto;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0,234,255,0.15);
+}
+
+.system-card ul {
+  text-align: left;
+  margin: 25px 0;
+}
+
+.system-card li { margin: 10px 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.box {
+  background: var(--panel);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.btn-primary, button {
+  padding: 12px 28px;
+  background: var(--neon);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid var(--neon);
+  padding: 10px 24px;
+  border-radius: 30px;
+  color: var(--neon);
+  text-decoration: none;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    padding: 60px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 60px 25px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+}
+
